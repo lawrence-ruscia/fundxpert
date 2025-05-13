@@ -154,16 +154,25 @@ export default function LoginForm({ className, ...props }) {
             </div>
             <div>
               <div className='space-y-2'>
-                <label
-                  htmlFor='password'
-                  className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
-                    customErrors.password && touched.password
-                      ? 'text-red-500'
-                      : ''
-                  }`}
-                >
-                  Password *
-                </label>
+                <div className='flex items-center justify-between'>
+                  <label
+                    htmlFor='password'
+                    className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${
+                      customErrors.password && touched.password
+                        ? 'text-red-500'
+                        : ''
+                    }`}
+                  >
+                    Password *
+                  </label>
+                  <a
+                    href='#'
+                    className='ml-auto inline-block text-sm underline-offset-4 hover:text-primary hover:underline '
+                  >
+                    Forgot your password?
+                  </a>
+                </div>
+
                 <PasswordInput
                   id='password'
                   name='password'
@@ -192,8 +201,31 @@ export default function LoginForm({ className, ...props }) {
         </CardContent>
       </Card>
       <div className='text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary  '>
-        By clicking continue, you agree to our <a href='#'>Terms of Service</a>{' '}
-        and <a href='#'>Privacy Policy</a>.
+        By clicking continue, you agree to our{' '}
+        <a
+          href='https://web-assets.metrobank.com.ph/1661480202-mbos-ebtc-as-of-sept-2021.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Terms of Use
+        </a>
+        ,{' '}
+        <a
+          href='https://www.metrobank.com.ph/articles/privacy-notice'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Privacy Policy
+        </a>
+        , and{' '}
+        <a
+          href='https://web-assets.metrobank.com.ph/1661480290-mbos-security-features.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Security Features
+        </a>
+        .
       </div>
     </div>
   );
