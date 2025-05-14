@@ -14,8 +14,8 @@ export function SectionCards() {
   const card = {
     personal: '157,000',
     employer: '157,000',
-    interest: '23,500',
-    total: '337,500',
+    interest: '33,500',
+    total: '366,386',
   };
 
   return (
