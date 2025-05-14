@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
+import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 import { useIsMobile } from '@/hooks/use-mobile';
 import {
@@ -14,6 +14,8 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent,
 } from '@/components/ui/chart';
 import {
   Select,
@@ -380,6 +382,7 @@ export function ChartAreaInteractive() {
                 });
               }}
             />
+            <YAxis />
             <ChartTooltip
               cursor={false}
               defaultIndex={isMobile ? -1 : filteredData.length - 1}
@@ -396,6 +399,9 @@ export function ChartAreaInteractive() {
                 />
               }
             />
+
+            <ChartLegend content={<ChartLegendContent />} />
+
             <Area
               dataKey='personal'
               type='natural'
