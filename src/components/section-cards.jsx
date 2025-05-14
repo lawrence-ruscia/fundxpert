@@ -77,7 +77,7 @@ export function SectionCards() {
           </div>
         </CardFooter>
       </Card>
-      <Card className='@container/card'>
+      <Card className='@conta iner/card'>
         <CardHeader>
           <CardDescription>Total Savings</CardDescription>
           <CardTitle className='text-2xl font-semibold tabular-nums @[250px]/card:text-3xl'>

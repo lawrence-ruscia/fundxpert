@@ -15,6 +15,10 @@ import {
   IconSearch,
   IconSettings,
   IconUsers,
+  IconPigMoney,
+  IconChartDots2,
+  IconWallet,
+  IconMessage,
 } from '@tabler/icons-react';
 
 import Logo from './logo';
@@ -45,24 +49,24 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: 'Lifecycle',
+      title: 'My Contributions',
       url: '#',
-      icon: IconListDetails,
+      icon: IconPigMoney,
     },
     {
-      title: 'Analytics',
+      title: 'Fund Projection',
       url: '#',
-      icon: IconChartBar,
+      icon: IconChartDots2,
     },
     {
-      title: 'Projects',
+      title: 'Loans',
       url: '#',
-      icon: IconFolder,
+      icon: IconWallet,
     },
     {
-      title: 'Team',
+      title: 'Help & Resources',
       url: '#',
-      icon: IconUsers,
+      icon: IconHelp,
     },
   ],
   navClouds: [
@@ -120,14 +124,9 @@ const data = {
       icon: IconSettings,
     },
     {
-      title: 'Get Help',
+      title: 'Contact HR',
       url: '#',
-      icon: IconHelp,
-    },
-    {
-      title: 'Search',
-      url: '#',
-      icon: IconSearch,
+      icon: IconMessage,
     },
   ],
   documents: [
@@ -168,8 +167,7 @@ export function AppSidebar({ ...props }) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className='mt-auto' />
+        <NavSecondary items={data.navSecondary} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

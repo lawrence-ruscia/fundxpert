@@ -7,12 +7,14 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarGroupLabel,
 } from '@/components/ui/sidebar';
 
 export function NavMain({ items }) {
   return (
     <SidebarGroup>
-      <SidebarGroupContent className='flex flex-col gap-2'>
+      <SidebarGroupContent className='flex flex-col'>
+        <SidebarGroupLabel className='font-semibold'>General</SidebarGroupLabel>
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
