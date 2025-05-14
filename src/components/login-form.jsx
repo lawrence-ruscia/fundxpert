@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import {
@@ -28,6 +29,8 @@ export default function LoginForm({ className, ...props }) {
     email: '',
     password: '',
   });
+
+  const navigate = useNavigate();
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -100,6 +103,7 @@ export default function LoginForm({ className, ...props }) {
     try {
       console.log(formData);
       // TODO: Add submission logic here, create route for displaying dashboard
+      navigate('/dashboard');
     } catch (error) {
       console.error('Form submission error', error);
     }

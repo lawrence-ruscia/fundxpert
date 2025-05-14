@@ -1,10 +1,11 @@
-import Dashboard from './app/dashboard/Dashboard';
+import Dashboard from './pages/Dashboard';
 import { ThemeProvider } from './components/theme-provider';
+import { Outlet } from 'react-router-dom';
 export const App = () => {
   return (
     <div>
       <ThemeProvider>
-        <Dashboard />
+        <Outlet />
       </ThemeProvider>
     </div>
   );
