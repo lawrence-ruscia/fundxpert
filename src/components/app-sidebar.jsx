@@ -17,6 +17,7 @@ import {
   IconUsers,
 } from '@tabler/icons-react';
 
+import Logo from './logo';
 import { NavDocuments } from '@/components/nav-documents';
 import { NavMain } from '@/components/nav-main';
 import { NavSecondary } from '@/components/nav-secondary';
@@ -159,8 +160,7 @@ export function AppSidebar({ ...props }) {
               className='data-[slot=sidebar-menu-button]:!p-1.5'
             >
               <a href='#'>
-                <IconInnerShadowTop className='!size-5' />
-                <span className='text-base font-semibold'>Acme Inc.</span>
+                <Logo />
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
