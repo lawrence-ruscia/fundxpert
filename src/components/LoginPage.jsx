@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import LoginForm from '@/components/login-form';
-import Logo from './components/logo';
-import background from './assets/login-background.png';
-import backgroundSmall from './assets/login-background-small.png';
+import Logo from './logo';
+import background from '../assets/login-background.png';
+import backgroundSmall from '../assets/login-background-small.png';
 export default function LoginPage() {
   const [isMobile, setIsMobile] = useState(false);
 
