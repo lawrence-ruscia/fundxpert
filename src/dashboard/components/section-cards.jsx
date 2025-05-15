@@ -73,7 +73,7 @@ export function SectionCards() {
         </CardHeader>
         <CardFooter className='flex-col items-start gap-1.5 text-sm'>
           <div className='line-clamp-1 flex gap-2 font-medium'>
-            +3.2% from last year <IconTrendingUp className='size-4' />
+            +3.2% from last month <IconTrendingUp className='size-4' />
           </div>
         </CardFooter>
       </Card>
