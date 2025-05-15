@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import {
   IconCamera,
   IconChartBar,
@@ -149,6 +150,9 @@ const data = {
 };
 
 export function AppSidebar({ ...props }) {
+  // Add state to track the active item (Default to dashboard)
+  const [activeItemId, setActiveItemId] = useState(data.navMain[0].title);
+
   return (
     <Sidebar collapsible='icon' variant='floating' {...props}>
       <SidebarHeader>
@@ -166,11 +170,23 @@ export function AppSidebar({ ...props }) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavSecondary items={data.navSecondary} />
+        <NavMain
+          items={data.navMain}
+          activeItemId={activeItemId}
+          setActiveItemId={setActiveItemId}
+        />
+        <NavSecondary
+          items={data.navSecondary}
+          activeItemId={activeItemId}
+          setActiveItemId={setActiveItemId}
+        />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser
+          user={data.user}
+          activeItemId={activeItemId}
+          setActiveItemId={setActiveItemId}
+        />
       </SidebarFooter>
     </Sidebar>
   );

@@ -10,7 +10,7 @@ import {
   SidebarGroupLabel,
 } from '@/components/ui/sidebar';
 
-export function NavMain({ items }) {
+export function NavMain({ items, activeItemId, setActiveItemId }) {
   return (
     <SidebarGroup>
       <SidebarGroupContent className='flex flex-col'>
@@ -18,8 +18,20 @@ export function NavMain({ items }) {
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton tooltip={item.title}>
-                {item.icon && <item.icon />}
+              <SidebarMenuButton
+                tooltip={item.title}
+                onClick={() => setActiveItemId(item.title)}
+                className={
+                  activeItemId === item.title
+                    ? 'bg-primary/10 text-primary font-medium'
+                    : ''
+                }
+              >
+                {item.icon && (
+                  <item.icon
+                    className={activeItemId === item.id ? 'text-primary' : ''}
+                  />
+                )}
                 <span>{item.title}</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
