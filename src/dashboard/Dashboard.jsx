@@ -1,5 +1,5 @@
 import { AppSidebar } from '@/components/app-sidebar';
-import { ChartAreaInteractive } from '@/dashboard/components/chart-area-interactive';
+import { ChartAreaInteractive } from '@/dashboard/components/fund-growth';
 import { DataTable } from '@/components/data-table';
 import { SectionCards } from '@/components/section-cards';
 import { SiteHeader } from '@/components/site-header';
