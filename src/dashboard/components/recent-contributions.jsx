@@ -19,6 +19,11 @@ export function RecentContributions() {
             });
           })();
 
+        // Format numbers with commas
+        const formatNumber = (num) => {
+          return new Intl.NumberFormat('en-US').format(num);
+        };
+
         return (
           <div key={contribution.date} className='flex items-center gap-4'>
             <div className='flex flex-1 flex-wrap items-center justify-between'>
@@ -27,11 +32,13 @@ export function RecentContributions() {
                   {monthYear} Contribution Processed
                 </p>
                 <p className='text-muted-foreground text-sm'>
-                  Your monthly contribution of ₱{contribution.personal} has been
-                  processed
+                  Your monthly contribution of ₱
+                  {formatNumber(contribution.personal)} has been processed
                 </p>
               </div>
-              <div className='font-medium'>₱{contribution.personal}</div>
+              <div className='font-medium'>
+                ₱{formatNumber(contribution.personal)}
+              </div>
             </div>
           </div>
         );
