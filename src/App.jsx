@@ -1,4 +1,3 @@
-import Dashboard from './pages/Dashboard';
 import { ThemeProvider } from './components/theme-provider';
 import { Outlet } from 'react-router-dom';
 export const App = () => {

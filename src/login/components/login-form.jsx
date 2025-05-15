@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { PasswordInput } from './ui/password-input';
+import { PasswordInput } from '@/components/ui/password-input';
 
 export default function LoginForm({ className, ...props }) {
   const formRef = useRef(null);
