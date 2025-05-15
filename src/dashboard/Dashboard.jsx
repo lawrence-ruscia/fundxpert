@@ -1,9 +1,12 @@
 import { AppSidebar } from '@/components/app-sidebar';
 import { FundGrowthChart } from '@/dashboard/components/fund-growth';
 import { SectionCards } from '@/dashboard/components/section-cards';
-import { SiteHeader } from '@/components/site-header';
+import { ProfileDropdown } from '@/components/profile-dropdown';
+import { Search } from '@/components/search';
+import { ModeToggle } from '@/components/mode-toggle';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 import { RecentContributions } from './components/recent-contributions';
+import { Header } from '@/components/header';
 import {
   Card,
   CardContent,
@@ -11,13 +14,20 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import user from './data/user.json';
 
 export default function Dashboard() {
   return (
     <SidebarProvider>
-      <AppSidebar variant='inset' />
+      <AppSidebar />
       <SidebarInset>
-        <SiteHeader />
+        <Header>
+          <div className='ml-auto flex items-center space-x-4'>
+            <Search />
+            <ModeToggle />
+            <ProfileDropdown user={user} />
+          </div>
+        </Header>
         <div className='flex flex-1 flex-col'>
           <div className='@container/main flex flex-1 flex-col gap-2'>
             <div className='flex flex-col gap-4 py-4 md:gap-6 md:py-6'>

@@ -150,7 +150,7 @@ const data = {
 
 export function AppSidebar({ ...props }) {
   return (
-    <Sidebar collapsible='offcanvas' {...props}>
+    <Sidebar collapsible='icon' variant='floating' {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
