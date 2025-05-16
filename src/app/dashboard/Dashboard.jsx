@@ -1,6 +1,6 @@
 import { AppSidebar } from '@/components/app-sidebar';
-import { FundGrowthChart } from '@/dashboard/components/fund-growth';
-import { SectionCards } from '@/dashboard/components/section-cards';
+import { FundGrowthChart } from './components/fund-growth';
+import { SectionCards } from './components/section-cards';
 import { ProfileDropdown } from '@/components/profile-dropdown';
 import { Search } from '@/components/search';
 import { ModeToggle } from '@/components/mode-toggle';

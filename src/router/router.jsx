@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { App } from '../App';
-import Login from '../login/LoginPage';
-import Dashboard from '../dashboard/Dashboard';
+import LoginPage from '@/app/login/LoginPage';
+import Dashboard from '@/app/dashboard/Dashboard';
 import PrivateRoute from '@/components/PrivateRoute';
 import Layout from '@/layout';
 import { Navigate } from 'react-router-dom';
-import Contributions from '@/contributions/Contributions';
+import Contributions from '@/app/contributions/Contributions';
 import NotFoundError from '@/errors/not-found-error';
 
 export const router = createBrowserRouter([
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     element: <App />,
     errorElement: <NotFoundError />, // Global error handler for the app
     children: [
-      { index: true, element: <Login /> },
+      { index: true, element: <LoginPage /> },
       {
         path: 'app',
         element: <PrivateRoute />,
