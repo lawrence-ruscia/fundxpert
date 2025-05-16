@@ -6,10 +6,13 @@ import PrivateRoute from '@/components/PrivateRoute';
 import Layout from '@/layout';
 import { Navigate } from 'react-router-dom';
 import Contributions from '@/contributions/Contributions';
+import NotFoundError from '@/errors/not-found-error';
+
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <NotFoundError />, // Global error handler for the app
     children: [
       { index: true, element: <Login /> },
       {
@@ -27,6 +30,7 @@ export const router = createBrowserRouter([
           },
         ],
       },
+      { path: '*', element: <NotFoundError /> }, // Catch any unmatched routes
     ],
   },
 ]);
