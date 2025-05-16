@@ -20,9 +20,16 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 import { useAuth } from '@/context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export function ProfileDropdown({ user }) {
   const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
     <DropdownMenu modal={false}>
@@ -59,7 +66,7 @@ export function ProfileDropdown({ user }) {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={logout}>
+        <DropdownMenuItem onClick={handleLogout}>
           <IconLogout />
           Log out
         </DropdownMenuItem>

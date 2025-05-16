@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "johndoe@metrobank.ph",
+      "password": "Password123!",
+      "user": {
+        "name": "John Doe",
+        "email": "johndoe@metrobank.ph",
+        "avatar": "/avatars/shadcn.jpg",
+        "role": "employee"
+      }
+    },
+    {
+      "id": 2,
+      "email": "janedoe@metrobank.ph",
+      "password": "Jane123!",
+      "user": {
+        "name": "Jane Doe",
+        "email": "janedoe@metrobank.ph",
+        "avatar": "/avatars/jane.jpg",
+        "role": "hr"
+      }
+    },
+    {
+      "id": 3,
+      "email": "mike@metrobank.ph",
+      "password": "Mike2025!",
+      "user": {
+        "name": "Mike Smith",
+        "email": "mike@metrobank.ph",
+        "avatar": "/avatars/mike.jpg",
+        "role": "admin"
+      }
+    }
+  ]
+}

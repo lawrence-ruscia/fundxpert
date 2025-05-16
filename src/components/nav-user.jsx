@@ -24,10 +24,17 @@ import {
 } from '@/components/ui/sidebar';
 
 import { useAuth } from '@/context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export function NavUser({ user }) {
   const { isMobile } = useSidebar();
   const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/'); // Navigate back to login page after logout
+  };
 
   return (
     <SidebarMenu>
@@ -87,7 +94,7 @@ export function NavUser({ user }) {
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={logout}>
+            <DropdownMenuItem onClick={handleLogout}>
               <IconLogout />
               Log out
             </DropdownMenuItem>

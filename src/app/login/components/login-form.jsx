@@ -25,10 +25,10 @@ export default function LoginForm({ className, ...props }) {
     email: false,
     password: false,
   });
-
   const [customErrors, setCustomErrors] = useState({
     email: '',
     password: '',
+    form: '',
   });
 
   const navigate = useNavigate();
@@ -41,6 +41,11 @@ export default function LoginForm({ className, ...props }) {
       ...prevData,
       [name]: value,
     }));
+
+    // Clear form error when typing
+    if (customErrors.form) {
+      setCustomErrors((prev) => ({ ...prev, form: '' }));
+    }
 
     // If field has been touched, check validity for visual feedback
     if (touched[name]) {
@@ -71,14 +76,13 @@ export default function LoginForm({ className, ...props }) {
     }));
   }
 
-  function onSubmit(event) {
+  async function onSubmit(event) {
+    event.preventDefault();
+
     // Let the form handle validation first
     const form = formRef.current;
 
     if (!form.checkValidity()) {
-      event.preventDefault();
-
-      // Mark all fields as touched
       setTouched({
         email: true,
         password: true,
@@ -100,15 +104,19 @@ export default function LoginForm({ className, ...props }) {
       return;
     }
 
-    event.preventDefault();
-
     try {
-      console.log(formData);
-      // TODO: Add submission logic here, create route for displaying dashboard
-      login(); // authenticate login
+      // Clear any previous form errors
+      setCustomErrors((prev) => ({ ...prev, form: '' }));
+
+      // Authenticate login using mock data
+      await login(formData.email, formData.password);
       navigate('/app/dashboard'); // Route for dashboard
     } catch (error) {
-      console.error('Form submission error', error);
+      console.error('Login error:', error);
+      setCustomErrors((prev) => ({
+        ...prev,
+        form: error.message || 'Invalid email or password',
+      }));
     }
   }
 
@@ -128,6 +136,12 @@ export default function LoginForm({ className, ...props }) {
             className='flex flex-col gap-4 max-w-3xl mx-auto'
             noValidate
           >
+            {customErrors.form && (
+              <div className='p-3 text-sm font-medium text-red-500 bg-red-50 rounded-md mb-2'>
+                {customErrors.form}
+              </div>
+            )}
+
             <div>
               <div className='space-y-2'>
                 <label
