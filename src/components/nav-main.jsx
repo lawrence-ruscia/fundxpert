@@ -1,6 +1,4 @@
-import { IconCirclePlusFilled, IconMail } from '@tabler/icons-react';
-
-import { Button } from '@/components/ui/button';
+import { NavLink } from 'react-router-dom';
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -10,7 +8,7 @@ import {
   SidebarGroupLabel,
 } from '@/components/ui/sidebar';
 
-export function NavMain({ items, activeItemId, setActiveItemId }) {
+export function NavMain({ items }) {
   return (
     <SidebarGroup>
       <SidebarGroupContent className='flex flex-col'>
@@ -18,22 +16,27 @@ export function NavMain({ items, activeItemId, setActiveItemId }) {
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton
-                tooltip={item.title}
-                onClick={() => setActiveItemId(item.title)}
-                className={
-                  activeItemId === item.title
-                    ? 'bg-primary/10 text-primary font-medium'
-                    : ''
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive ? 'bg-primary text-primary font-medium' : ''
                 }
+                end
               >
-                {item.icon && (
-                  <item.icon
-                    className={activeItemId === item.id ? 'text-primary' : ''}
-                  />
+                {({ isActive }) => (
+                  <SidebarMenuButton
+                    tooltip={item.title}
+                    className={`transition-colors ${
+                      isActive
+                        ? 'bg-sidebar-accent text-sidebar-accent-foreground'
+                        : ''
+                    }`}
+                  >
+                    {item.icon && <item.icon />}
+                    <span>{item.title}</span>
+                  </SidebarMenuButton>
                 )}
-                <span>{item.title}</span>
-              </SidebarMenuButton>
+              </NavLink>
             </SidebarMenuItem>
           ))}
         </SidebarMenu>

@@ -106,7 +106,7 @@ export default function LoginForm({ className, ...props }) {
       console.log(formData);
       // TODO: Add submission logic here, create route for displaying dashboard
       login(); // authenticate login
-      navigate('/dashboard'); // Route for dashboard
+      navigate('/app/dashboard'); // Route for dashboard
     } catch (error) {
       console.error('Form submission error', error);
     }

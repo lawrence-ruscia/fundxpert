@@ -46,27 +46,27 @@ const data = {
   navMain: [
     {
       title: 'Dashboard',
-      url: '#',
+      path: '/app/dashboard',
       icon: IconDashboard,
     },
     {
       title: 'My Contributions',
-      url: '#',
+      path: '/app/my-contributions',
       icon: IconPigMoney,
     },
     {
       title: 'Fund Projection',
-      url: '#',
+      path: '/app/fund-projection',
       icon: IconChartDots2,
     },
     {
       title: 'Loans',
-      url: '#',
+      path: '/app/loans',
       icon: IconWallet,
     },
     {
       title: 'Help & Resources',
-      url: '#',
+      path: '/app/help',
       icon: IconHelp,
     },
   ],
@@ -150,9 +150,6 @@ const data = {
 };
 
 export function AppSidebar({ ...props }) {
-  // Add state to track the active item (Default to dashboard)
-  const [activeItemId, setActiveItemId] = useState(data.navMain[0].title);
-
   return (
     <Sidebar collapsible='icon' variant='floating' {...props}>
       <SidebarHeader>
@@ -170,23 +167,11 @@ export function AppSidebar({ ...props }) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain
-          items={data.navMain}
-          activeItemId={activeItemId}
-          setActiveItemId={setActiveItemId}
-        />
-        <NavSecondary
-          items={data.navSecondary}
-          activeItemId={activeItemId}
-          setActiveItemId={setActiveItemId}
-        />
+        <NavMain items={data.navMain} />
+        <NavSecondary items={data.navSecondary} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser
-          user={data.user}
-          activeItemId={activeItemId}
-          setActiveItemId={setActiveItemId}
-        />
+        <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
   );

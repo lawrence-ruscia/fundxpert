@@ -25,7 +25,7 @@ import {
 
 import { useAuth } from '@/context/AuthContext';
 
-export function NavUser({ user, activeItemId, setActiveItemId }) {
+export function NavUser({ user }) {
   const { isMobile } = useSidebar();
   const { logout } = useAuth();
 
@@ -36,12 +36,7 @@ export function NavUser({ user, activeItemId, setActiveItemId }) {
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size='lg'
-              className={`data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground ${
-                activeItemId === 'user-profile'
-                  ? 'bg-primary/10 text-primary'
-                  : ''
-              }`}
-              onClick={() => setActiveItemId('user-profile')}
+              className={`data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground`}
             >
               <Avatar className='h-8 w-8 rounded-lg grayscale'>
                 <AvatarImage src={user.avatar} alt={user.name} />
@@ -78,41 +73,16 @@ export function NavUser({ user, activeItemId, setActiveItemId }) {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem
-                onClick={() => setActiveItemId('account')}
-                className={
-                  activeItemId === 'account' ? 'bg-primary/10 text-primary' : ''
-                }
-              >
-                <IconUserCircle
-                  className={activeItemId === 'account' ? 'text-primary' : ''}
-                />
+              <DropdownMenuItem>
+                <IconUserCircle />
                 Account
               </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setActiveItemId('billing')}
-                className={
-                  activeItemId === 'billing' ? 'bg-primary/10 text-primary' : ''
-                }
-              >
-                <IconCreditCard
-                  className={activeItemId === 'billing' ? 'text-primary' : ''}
-                />
+              <DropdownMenuItem>
+                <IconCreditCard />
                 Billing
               </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => setActiveItemId('notifications')}
-                className={
-                  activeItemId === 'notifications'
-                    ? 'bg-primary/10 text-primary'
-                    : ''
-                }
-              >
-                <IconNotification
-                  className={
-                    activeItemId === 'notifications' ? 'text-primary' : ''
-                  }
-                />
+              <DropdownMenuItem>
+                <IconNotification />
                 Notifications
               </DropdownMenuItem>
             </DropdownMenuGroup>

@@ -3,7 +3,9 @@ import { App } from '../App';
 import Login from '../login/LoginPage';
 import Dashboard from '../dashboard/Dashboard';
 import PrivateRoute from '@/components/PrivateRoute';
-
+import Layout from '@/layout';
+import { Navigate } from 'react-router-dom';
+import Contributions from '@/contributions/Contributions';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -11,9 +13,19 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Login /> },
       {
-        path: 'dashboard',
-        element: <PrivateRoute />, // protect dashboard from unauthenticated user
-        children: [{ index: true, element: <Dashboard /> }],
+        path: 'app',
+        element: <PrivateRoute />,
+        children: [
+          {
+            element: <Layout />,
+            children: [
+              { index: true, element: <Navigate to='dashboard' /> },
+              { path: 'dashboard', element: <Dashboard /> },
+              { path: 'my-contributions', element: <Contributions /> },
+              // TODO: Add routes here
+            ],
+          },
+        ],
       },
     ],
   },
