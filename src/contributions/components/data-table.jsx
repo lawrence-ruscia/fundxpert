@@ -62,6 +62,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MixerHorizontalIcon } from '@radix-ui/react-icons';
 import { DataTableToolbar } from './data-table-toolbar';
 import columns from './columns';
+
 export const schema = z.object({
   id: z.number(),
   header: z.string(),

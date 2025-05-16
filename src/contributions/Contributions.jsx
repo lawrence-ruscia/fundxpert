@@ -1,7 +1,8 @@
 import { DataTable } from './components/data-table';
 import { Button } from '@/components/ui/button';
 import { IconUpload } from '@tabler/icons-react';
-import data from './components/data.json';
+import tableData from './components/data.json';
+
 export default function Contributions() {
   return (
     <div className='flex flex-1 flex-col'>
@@ -16,15 +17,9 @@ export default function Contributions() {
                 Here&apos;s a breakdown of your contributions and earnings
               </p>
             </div>
-            <div>
-              <Button variant='outline' className='space-x-1'>
-                <span>Export</span> <IconUpload size={18} />
-              </Button>
-            </div>
           </div>
-
           <div>
-            <DataTable data={data} />
+            <DataTable data={tableData} />
           </div>
         </div>
       </div>
