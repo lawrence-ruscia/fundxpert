@@ -1,12 +1,6 @@
 import { Input } from '@/components/ui/input';
 
 export function DataTableToolbar({ table }) {
-  const date = new Date();
-  const formattedDate = date.toLocaleDateString('en-PH', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
   return (
     <div className='flex items-center justify-between'>
       <div className='flex flex-1 flex-col-reverse items-start gap-y-2 sm:flex-row sm:items-center sm:space-x-2'>
