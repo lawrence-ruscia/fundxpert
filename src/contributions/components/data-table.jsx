@@ -94,7 +94,8 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-
+import { MixerHorizontalIcon } from '@radix-ui/react-icons';
+import { DataTableToolbar } from './data-table-toolbar';
 export const schema = z.object({
   id: z.number(),
   header: z.string(),
@@ -368,15 +369,18 @@ export function DataTable({ data: initialData }) {
       defaultValue='outline'
       className='flex w-full flex-col justify-start gap-6'
     >
-      <div className='flex items-center justify-between px-4 lg:px-6'>
+      <div className='flex items-center gap-2 px-4 lg:px-6'>
+        <DataTableToolbar table={table} />
         <div className='flex items-center gap-2'>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant='outline' size='sm'>
-                <ColumnsIcon />
-                <span className='hidden lg:inline'>Customize Columns</span>
-                <span className='lg:hidden'>Columns</span>
-                <ChevronDownIcon />
+              <Button
+                variant='outline'
+                size='sm'
+                className='ml-auto hidden h-8 lg:flex'
+              >
+                <MixerHorizontalIcon className='mr-2 h-4 w-4' />
+                <span className='hidden lg:inline font-semibold'>View</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='end' className='w-56'>

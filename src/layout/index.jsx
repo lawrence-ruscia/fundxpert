@@ -13,8 +13,8 @@ export default function Layout() {
       <AppSidebar />
       <SidebarInset>
         <Header>
+          <Search />
           <div className='ml-auto flex items-center space-x-4'>
-            <Search />
             <ModeToggle />
             <ProfileDropdown user={user} />
           </div>
