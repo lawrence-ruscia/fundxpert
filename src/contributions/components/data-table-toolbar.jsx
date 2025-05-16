@@ -13,10 +13,10 @@ export function DataTableToolbar({ table }) {
         <div className='relative w-full flex-1 lg:max-w-sm'>
           <MagnifyingGlassIcon className='absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground' />
           <Input
-            placeholder='Search contributions...'
-            value={table.getColumn('description')?.getFilterValue() ?? ''}
+            placeholder='Search date...'
+            value={table.getColumn('date')?.getFilterValue() ?? ''}
             onChange={(event) =>
-              table.getColumn('description')?.setFilterValue(event.target.value)
+              table.getColumn('date')?.setFilterValue(event.target.value)
             }
             className='w-full pl-8'
           />
