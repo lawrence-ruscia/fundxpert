@@ -1,0 +1,314 @@
+[
+  {
+    "id": 1,
+    "date": "2024-05-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2000,
+        "income": 0
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2000,
+        "income": 0
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4000,
+        "income": 0
+      }
+    ],
+    "balance": 4000
+  },
+  {
+    "id": 2,
+    "date": "2024-06-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2000,
+        "income": 30
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2000,
+        "income": 30
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4000,
+        "income": 60
+      }
+    ],
+    "balance": 8060
+  },
+  {
+    "id": 3,
+    "date": "2024-07-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2000,
+        "income": 40
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2000,
+        "income": 40
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4000,
+        "income": 80
+      }
+    ],
+    "balance": 12140
+  },
+  {
+    "id": 4,
+    "date": "2024-08-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2000,
+        "income": 60
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2000,
+        "income": 60
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4000,
+        "income": 120
+      }
+    ],
+    "balance": 16260
+  },
+  {
+    "id": 5,
+    "date": "2024-09-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2400,
+        "income": 81
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2400,
+        "income": 81
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4800,
+        "income": 162
+      }
+    ],
+    "balance": 21222
+  },
+  {
+    "id": 6,
+    "date": "2024-10-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2400,
+        "income": 106
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2400,
+        "income": 106
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4800,
+        "income": 212
+      }
+    ],
+    "balance": 26234
+  },
+  {
+    "id": 7,
+    "date": "2024-11-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2400,
+        "income": 131
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2400,
+        "income": 131
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4800,
+        "income": 262
+      }
+    ],
+    "balance": 31296
+  },
+  {
+    "id": 8,
+    "date": "2024-12-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2400,
+        "income": 156
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2400,
+        "income": 156
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4800,
+        "income": 312
+      }
+    ],
+    "balance": 36408
+  },
+  {
+    "id": 9,
+    "date": "2025-01-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2400,
+        "income": 182
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2400,
+        "income": 182
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4800,
+        "income": 364
+      }
+    ],
+    "balance": 41572
+  },
+  {
+    "id": 10,
+    "date": "2025-02-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2400,
+        "income": 208
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2400,
+        "income": 208
+      }
+    ],
+    "total": [
+      {
+        "contribution": 4800,
+        "income": 416
+      }
+    ],
+    "balance": 46788
+  },
+  {
+    "id": 11,
+    "date": "2025-03-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2500,
+        "income": 234
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2500,
+        "income": 234
+      }
+    ],
+    "total": [
+      {
+        "contribution": 5000,
+        "income": 468
+      }
+    ],
+    "balance": 52256
+  },
+  {
+    "id": 12,
+    "date": "2025-04-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2500,
+        "income": 261
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2500,
+        "income": 261
+      }
+    ],
+    "total": [
+      {
+        "contribution": 5000,
+        "income": 522
+      }
+    ],
+    "balance": 57778
+  },
+  {
+    "id": 13,
+    "date": "2025-05-12",
+    "description": "Monthly Contribution",
+    "employee": [
+      {
+        "contribution": 2500,
+        "income": 289
+      }
+    ],
+    "bank": [
+      {
+        "contribution": 2500,
+        "income": 289
+      }
+    ],
+    "total": [
+      {
+        "contribution": 5000,
+        "income": 578
+      }
+    ],
+    "balance": 63356
+  }
+]
